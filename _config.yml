@@ -1,0 +1,58 @@
+title: Oh, Hello World!
+description: My Personal Stack Problems
+author: Sangeet Narayan
+github: https://github.com/sangeetds
+about: Software Engineer Intern | BITS Goa
+disqus_shortname: sangeet-narayan
+google_analytics: UA-XXXXXXXX-Y
+
+author: Sangeet Narayan  # add your name
+author-img: me.png # add your photo
+about-author: Software Developer Intern @ Cleartax | BITS Pilani # add description
+social-github: sangeetds # add your Github handle
+social-linkedin: sangeetnarayan # add your Linkedin handle
+social-email: sangeetnarayands@gmail.com # add your Email address
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-gist
+
+enableTags: true
+tagarray: []
+
+# Disqus
+discus-identifier: sangeet_narayan # add your discus identifier
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+share:
+  twitter_username: github.io
+  fb_appid: 1749788565247320
+
+urls:
+    - text: Articles
+      url: /articles
+    - text: My Projects
+      url: /projects/
+
+url: "https://sangeetnarayan.github.io"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
