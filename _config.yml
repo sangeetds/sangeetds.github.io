@@ -41,7 +41,7 @@ urls:
       url: /projects/
 
 url: "https://sangeetnarayan.github.io"
-baseurl: "home"
+baseurl: ""
 paginate: 20
 per_page: 20
 paginate_path: "/page/:num/"
