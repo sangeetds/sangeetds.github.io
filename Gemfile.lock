@@ -267,6 +267,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-redirect-from
   octopress-codeblock
   webrick (~> 1.7)
 
