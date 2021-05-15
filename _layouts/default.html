@@ -9,6 +9,8 @@ layout: compress
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/static/img/favicon.ico" />
     <link href="/static/css/syntax.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
     <meta name="author" content="{{ site.author }}" />
     <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
@@ -113,11 +115,11 @@ layout: compress
   </head>
   <body>
       <aside class="sidebar">
-        <header>
+        <header class="sidebar-about">
           <div class="about">
-            <div class="cover-author-image">
+            <!-- <div class="cover-author-image">
               <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/static/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
-            </div>
+            </div> -->
             <div class="author-name">{{site.author}}</div>
             <p>{{site.about-author}}</p>
           </div>

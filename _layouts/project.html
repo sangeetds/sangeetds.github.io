@@ -14,13 +14,13 @@ layout: default
       {% for i in site.data.projects %}
       <article class="post">
         {% if i.image %}
-          <a class="post-thumbnail" style="background-image: url({{"/static/projects/placeholder.jpg"}})" href="{{i.url}}"></a>
+          <a class="post-thumbnail" style="background-image: url('/static/projects/{{ i.image }}');" href="{{i.url}}"></a>
         {% else %}
         {% endif %}
         <div class="post-content">
           <h2 class="post-title"><a href="{{post.url | prepend: site.baseurl}}">{{i.name}}</a></h2>
-          <span class="post-date">{{i.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-          <span class="post-words">{% capture words %}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
+          <span class="post-date">{{i.date | date: '%Y, %b'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
+          <span class="post-words">{{ i.description }}</span>
         </div>
       </article>
       {% endfor %}

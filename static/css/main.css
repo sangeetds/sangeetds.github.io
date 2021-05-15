@@ -868,18 +868,23 @@ table tfoot td {
   bottom: 0;
   width: 400px;
   height: 100%;
-  padding: 30px 20px;
-  background-color: #000;
-  /* color: #c9d1d9; */
-  font-weight: 900;
+  padding: 30px 20px 30px 36px;
+  background-color: #202020;
   font-size: 16px;
   color: #FFF;
   font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
 }
 
+a:active {
+    font-weight: bold;
+}
+
+.sidebar-about {
+    margin-top: 60%;
+}
+
 .about {
   margin: 0 0 40px;
-  text-align: center;
 }
 
 .about .cover-author-image {
@@ -909,42 +914,29 @@ table tfoot td {
           transform: scale3d(0.9, 0.9, 1);
 }
 
+
 .about .author-name {
-  font-family: 'Helvetica Neue', 'PT Serif', serif;
+  font-family: "Abril Fatface", serif;
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
   font-size: 16px;
-  text-transform: uppercase;
+  font-size: 4.5rem;
+  font-weight: bold;
+  line-height: 1.25;
   color: #FFF;
   font-weight: 700;
 }
 
-.about .author-name::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-  display: block;
-  width: 7px;
-  height: 7px;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  background-color: #c9d1d9;
-}
-
 .navlink {
-    font-weight: 900;
     font-size: 16px;
     text-decoration: none;
     color: #FFF;
 }
 
 .about p {
-  font-size: 16px;
+    color: rgba(255,255,255,.5);
+      font-size: 1.75rem;
   margin: 0 0 10px;
 }
 
@@ -1009,6 +1001,12 @@ table tfoot td {
   right: 0;
   background-color: #515151;
 }
+
+.sidebar-nav {
+    padding-left: 0;
+    margin-left: -19%;
+}
+
 
 .sidebar-nav li {
     display: list-item;
