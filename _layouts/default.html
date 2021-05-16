@@ -11,6 +11,8 @@ layout: compress
     <link href="/static/css/syntax.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/bpv6deg.css">
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
     <meta name="author" content="{{ site.author }}" />
     <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
@@ -113,7 +115,7 @@ layout: compress
       </script>
     {% endif %}
   </head>
-  <body>
+  <body style="background: url('../static/img/bg-pattern.png');">
       <aside class="sidebar">
         <header class="sidebar-about">
           <div class="about">
