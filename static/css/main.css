@@ -1387,6 +1387,23 @@ hr {
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .sidebar-about {
+        margin-top: 0%;
+    }
+
+    .sidebar-nav {
+        margin-left: -8%;
+        margin: 7% 0% 2% -8%;
+    }
+
+    .about-home {
+        margin-left: 0%;
+    }
+
+    .dot {
+        width: 35%;
+    }
+
   .post {
     width: 48%;
     max-width: 100%;
@@ -1430,7 +1447,6 @@ hr {
             justify-content: space-between;
     width: 100%;
     padding: 10px;
-    background-color: #ffffff;
     -webkit-box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
             box-shadow: 0 1px 1px 0 rgba(31, 35, 46, 0.15);
   }
