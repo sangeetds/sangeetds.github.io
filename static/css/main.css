@@ -1354,12 +1354,8 @@ margin: 36px 0px;
 
 .about-home {
     text-align: center;
-vertical-align: middle;
-margin: 10% 0% 0% 12%;
-}
-
-.hero-about {
-
+    vertical-align: middle;
+    margin: 10% 0% 0% 12%;
 }
 
 .about-home .dot {
