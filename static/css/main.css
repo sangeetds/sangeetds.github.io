@@ -1071,7 +1071,7 @@ footer .copyright {
 }
 
 .post {
-  width: 100%;
+  width: 80%;
   max-width: 100%;
   margin-bottom: 1.5rem;
   display: -webkit-box;
@@ -1384,6 +1384,11 @@ hr {
     font-weight: bold;
 }
 
+.post-header, .project-para {
+    width: 80%;
+}
+
+
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -1408,6 +1413,7 @@ hr {
     width: 48%;
     max-width: 100%;
     margin: 0 0.9% 1.5%;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1416,6 +1422,7 @@ hr {
   }
   .post .post-thumbnail {
     width: 100%;
+    min-height: 16rem;
   }
   .post .post-content {
     width: 100%;
