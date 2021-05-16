@@ -834,6 +834,7 @@ table tfoot td {
 
 .post, .article-page {
   background-color: #fff;
+  width: 100% !important;
 }
 
 ::-moz-selection {
@@ -1385,13 +1386,17 @@ hr {
 }
 
 .post-header, .project-para {
-    width: 80%;
+    width: 100%;
 }
 
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .article-page {
+        width: 100%;
+    }
+
     .sidebar-about {
         margin-top: 0%;
     }
