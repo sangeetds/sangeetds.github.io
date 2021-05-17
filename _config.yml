@@ -23,6 +23,12 @@ plugins:
 enableTags: true
 tagarray: []
 
+utterances:
+  repo: "sangeetds/sangeetds.github.io"
+  issue-term: "pathname"
+  label: "utteranc.es"
+  theme: "github-light"
+
 # Disqus
 discus-identifier: sangeet_narayan # add your discus identifier
 
