@@ -17,8 +17,8 @@ highlighter: rouge
 
 plugins:
   - jekyll-gist
-plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
 
 enableTags: true
 tagarray: []

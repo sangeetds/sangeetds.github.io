@@ -5,3 +5,5 @@ gem 'jekyll-redirect-from'
 group :jekyll_plugins do
   gem 'octopress-codeblock'
 end
+
+gem "jekyll-seo-tag", "~> 2.7"

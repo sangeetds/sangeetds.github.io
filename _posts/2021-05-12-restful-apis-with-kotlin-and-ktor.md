@@ -4,9 +4,12 @@ title: RESTful APIs with Kotlin and Ktor
 date: 2021-05-12 13:32:20 +0300
 description: Learn how to use the new Ktor framework to create REST APIs.
 img: k.png # Add image post (optional)
-fig-caption: # Add figcaption (optional)
 tags: [Kotlin, Ktor, REST APIs]
 comments: true
+image:
+  path: k.png
+  height: 400
+  width: 600
 ---
 
 Application Programming Interface or API can be simply defined as an intermediary which allows two applications to talk to each other.  You likely encounter thousands of such APIs in your daily internet journey. When you visit any webpage such as [www.youtube.com][youtube], your browser makes API calls to YouTube. Similarly, there are various API calls when you search for a video on YouTube or when you make a search for something on Instagram.
