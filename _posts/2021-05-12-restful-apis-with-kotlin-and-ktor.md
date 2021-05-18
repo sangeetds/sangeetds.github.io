@@ -9,14 +9,15 @@ tags: [Kotlin, Ktor, REST APIs]
 comments: true
 ---
 
-Application Programming Interface or API can be simply defined as an intermediary which allows two applications to talk to each other. Over a majority of API are actually REpresentational State Transfer or REST APIs. You likely encounter thousands of such APIs in your daily internet journey, be it searching for videos on YouTube or searching
-for someone on Instagram.
+Application Programming Interface or API can be simply defined as an intermediary which allows two applications to talk to each other.  You likely encounter thousands of such APIs in your daily internet journey. When you visit any webpage such as [www.youtube.com][youtube], your browser makes API calls to YouTube. Similarly, there are various API calls when you search for a video on YouTube or when you make a search for something on Instagram.
 
-REST is an architectural design concept for modelling and accessing the resource in your application. It's always advised to follow its rules to run into problems down the road.
+REpresentational State Transfer or REST is an architectural design concept for accessing the resource in your application. It's always advised to follow its guidelines to run into problems down the road.
 
 
 ## What are we building
-In this tutorial, we will build a simple backend Application for the pet store. We will expose various endpoints that will let people get information about the pets in the store, add a new member to the store or remove them from the store.
+In this tutorial, we will build a simple backend Application for a pet store. We will expose various endpoints that will let people get information about the pets in the store, add a new member to the store or remove them from the store.
+
+If you get stuck at any point you can have a look at the final state of the application [here][petstore].
 
 ## Why Kotlin and Ktor?
 Whenever I set out for building out a new program/application, I look for two things:-
@@ -38,7 +39,7 @@ To run a Ktor application, you need to create a server first. There's two way to
 
 * EmbeddedServer: This is the simplest way to create your server where you can pass different parameters such as the server type, port, etc., in code and run the application.
 * EngineMain: This provides more flexibility as you can define the parameters in `application.conf` file in resources, and the server will load the changes without any recompilation.
-* Let's begin with an embeddedServer to create a simple server. Let's give a look at the `Application.kt` file in the src directory. It might contain the code for engineMain if you created the project with the Intellij plugin. You may replace the code with this code.
+* Let's begin with an embeddedServer to create a simple server. Give a look at the `Application.kt` file in the src directory. It might contain the code for engineMain if you created the project with the Intellij plugin. You may replace the code with this code.
 
 <code data-gist-id="60e4bfdf66e7d5e0e32d456eca0f74d3" data-gist-hide-line-numbers="true">/code>
 
@@ -59,7 +60,7 @@ To run a Ktor application, you need to create a server first. There's two way to
 
 6. This would start up the server.
 
-Let's run the application and see whether everything's working fine or not. Open your browser and go to the address `localhost:8080` (given you passed 8080 as the port value). You might see `Hello World!` on your browser screen. The browser serves as an effective way to make GET requests but has no mean to make any other type of requests. Therefore, we will use `cURL` for making further requests. You can even use Intellij IDEA's in-built HTTP client or Postman to make requests. The curl command for making a get request to our current endpoint will be: `curl localhost:8080`
+Run the application and see whether everything's working fine or not. Open your browser and go to the address `localhost:8080` (given you passed 8080 as the port value). You might see `Hello World!` on your browser screen. The browser serves as an effective way to make GET requests but has no mean to make any other type of requests. Therefore, we will be using `cURL` for making further requests. You can even use Intellij IDEA's in-built HTTP client or Postman to make requests. The curl command for making a get request to our current endpoint will be: `curl localhost:8080`
 
 There are a few changes that we can do our server. Let's replace the routing endpoints with routing functions that would match the requests. We will replace our original route with a `get` function that now only needs to take the URL and the code to handle the request.
 
@@ -81,7 +82,7 @@ Now for any GET requests, we can try returning the pets that we have in our stor
 
 <code data-gist-id="11bedc62984605ed090f22f731051fd0" data-gist-hide-line-numbers="true">/code>
 
-Let's rerun our server and check the results in a browser. Open any browser and go to `localhost:8080`. What do you see? No need to refresh your browser; you wouldn't see anything there.
+Rerun our server and check the results in a browser. Open any browser and go to `localhost:8080`. What do you see? No need to refresh your browser; you wouldn't see anything there.
 
 Why do we see nothing on our screen? If you go back to your IDE/console you will see that ktor has thrown an exception starting like this:
 
@@ -89,7 +90,7 @@ Why do we see nothing on our screen? If you go back to your IDE/console you will
 java.lang.IllegalArgumentException: Response pipeline couldn't transform 'class java.util.ArrayList' to the OutgoingContent
 {% endhighlight %}
 
-Ktor is just trying to say that it has no way to send our `petList` in a format that the browser can read. Client and server mainly interact with texts or JSON, and we need to tell Ktor how to convert our `petList` or any object into such format. We will have to do two things. First, we need to install a feature, namely `ContentNegotiation`, to negotiate the types between the client and the server and serialize/deserialize the contents. For serialization/deserialization, we can use either the `kotlinx. serialization` library or maybe Gson, Jackson, etc. We will go with the in-built one.
+Ktor is just trying to say that it has no way to send our `petList` in a format that the browser can read. Client and server mainly interact with texts or JSON, and we need to tell Ktor how to convert our `petList` or any object into such format. First, we need to install a feature, namely `ContentNegotiation`, to negotiate the types between the client and the server and serialize/deserialize the contents. For serialization/deserialization, we can use either the `kotlinx. serialization` library or maybe Gson, Jackson, etc. We will go with the in-built one.
 
 <code data-gist-id="2341d890661deffd4f3135d0f8564fb7" data-gist-hide-line-numbers="true">/code>
 
@@ -130,3 +131,5 @@ We can add persistence to our application. We were hardcoding objects for our ap
 That's it! We have built our pet store very quickly. There a lot of other features that Ktor offers that we could discuss in another article. Do let me know your thoughts in the comments down below!
 
 [ktor-start]: https://ktor.io/quickstart/generator.html#
+[youtube]: www.youtube.com
+[petstore]: https://github.com/sangeetds/petstore
