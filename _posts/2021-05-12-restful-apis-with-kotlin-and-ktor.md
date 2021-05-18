@@ -6,10 +6,6 @@ description: Learn how to use the new Ktor framework to create REST APIs.
 img: k.png # Add image post (optional)
 tags: [Kotlin, Ktor, REST APIs]
 comments: true
-image:
-  path: k.png
-  height: 400
-  width: 600
 ---
 
 Application Programming Interface or API can be simply defined as an intermediary which allows two applications to talk to each other.  You likely encounter thousands of such APIs in your daily internet journey. When you visit any webpage such as [www.youtube.com][youtube], your browser makes API calls to YouTube. Similarly, there are various API calls when you search for a video on YouTube or when you make a search for something on Instagram.
