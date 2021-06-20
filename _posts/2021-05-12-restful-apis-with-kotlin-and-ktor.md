@@ -41,29 +41,6 @@ To run a Ktor application, you need to create a server first. There's two way to
 * Let's begin with an embeddedServer to create a simple server. Give a look at the `Application.kt` file in the src directory. It might contain the code for engineMain if you created the project with the Intellij plugin. You may replace the existing code with this:
 
 <code data-gist-id="60e4bfdf66e7d5e0e32d456eca0f74d3" data-gist-hide-line-numbers="true">/code>
-
-{% highlight kotlin %}
-import io.ktor.application.call
-import io.ktor.http.HttpMethod
-import io.ktor.response.respondText
-import io.ktor.routing.route
-import io.ktor.routing.routing
-import io.ktor.server.engine.embeddedServer
-import io.ktor.server.netty.Netty
-fun main() { // (1)
-val server = embeddedServer(Netty, port = 8080) { // (2)
-    routing { // (3)
-      route("/", HttpMethod.Get) { // (4)
-        handle {
-          call.respondText("Hello World!") // (5)
-        }
-      }
-    }
-  }
-  server.start(wait = true) // (6)
-}
-{% endhighlight %}
-
 ## Dissecting the starter code
 
 1. This is the main module of the app. As you can see, I've not passed `args` as an argument to the main function. Kotlin provides flexibility over choosing to pass args as per your requirement.
