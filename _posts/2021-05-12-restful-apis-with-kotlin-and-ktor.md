@@ -38,9 +38,31 @@ To run a Ktor application, you need to create a server first. There's two way to
 
 * EmbeddedServer: This is the simplest way to create your server where you can pass different parameters such as the server type, port, etc., in code and run the application.
 * EngineMain: This provides more flexibility as you can define the parameters in `application.conf` file in resources, and the server will load the changes without any recompilation.
-* Let's begin with an embeddedServer to create a simple server. Give a look at the `Application.kt` file in the src directory. It might contain the code for engineMain if you created the project with the Intellij plugin. You may replace the code with this code.
+* Let's begin with an embeddedServer to create a simple server. Give a look at the `Application.kt` file in the src directory. It might contain the code for engineMain if you created the project with the Intellij plugin. You may replace the existing code with this:
 
 <code data-gist-id="60e4bfdf66e7d5e0e32d456eca0f74d3" data-gist-hide-line-numbers="true">/code>
+
+{% highlight kotlin %}
+import io.ktor.application.call
+import io.ktor.http.HttpMethod
+import io.ktor.response.respondText
+import io.ktor.routing.route
+import io.ktor.routing.routing
+import io.ktor.server.engine.embeddedServer
+import io.ktor.server.netty.Netty
+fun main() { // (1)
+val server = embeddedServer(Netty, port = 8080) { // (2)
+    routing { // (3)
+      route("/", HttpMethod.Get) { // (4)
+        handle {
+          call.respondText("Hello World!") // (5)
+        }
+      }
+    }
+  }
+  server.start(wait = true) // (6)
+}
+{% endhighlight %}
 
 ## Dissecting the starter code
 

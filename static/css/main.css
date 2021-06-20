@@ -1023,9 +1023,14 @@ p {
   background-color: #515151;
 }
 
+.bg {
+  background: url('../img/bg-pattern.png');
+}
+
 .sidebar-nav {
     padding-left: 0;
     margin-left: -19%;
+    list-style-type:none;
 }
 
 
