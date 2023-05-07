@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RESTful APIs with Kotlin and Ktor
-date: 2021-05-12 13:32:20 +0300
+date: 2021-05-12 13:32:20 +0530
 description: Learn how to use the new Ktor framework to create REST APIs.
 img: k.png # Add image post (optional)
 tags: [Kotlin, Ktor, REST APIs]

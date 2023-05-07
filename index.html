@@ -2,7 +2,6 @@
 layout: default
 permalink: /articles
 ---
-{% for post in paginator.posts %}
 <header class="post-header">
   <h1 class="post-title"> Articles </h1>
   Unfrequently penning down my thoughts on technology,
@@ -11,6 +10,7 @@ permalink: /articles
   a blog.
   <hr />
 </header>
+{% for post in paginator.posts %}
 <article class="post">
   {% if post.img %}
     <a class="post-thumbnail" style="background-image: url({{"/static/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url}}"></a>
